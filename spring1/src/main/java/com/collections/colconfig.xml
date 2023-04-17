@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean class="com.collections.example" name="example">
+		<property name="name" value="Harsh"/>
+		<property name="books">
+			<!--	if we have only one item in any collection than no need of list tag directly give in value tag
+-->
+			
+			<list>
+				<value>maths</value>
+			     <value>english</value>
+			    <value>science</value>
+			</list>
+		</property>
+		<property name="address">
+				<set>
+				<value>up</value>
+			     <value>uk</value>
+			    <value>delhi</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="python" value="2mon"/>
+			<entry key="java" value="4d"/>
+			</map>
+			
+		</property>
+	</bean>
+	</beans>
+	
+	

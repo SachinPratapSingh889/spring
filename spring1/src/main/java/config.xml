@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+<!--	Setter injection-->
+	<bean class="com.spring1.student" name="student1">
+		<property name="stId">
+			<value>204</value>
+		</property>
+		<property name="stName">
+			<value>Sachin</value>
+		</property>
+		<property name="address">
+			<value>BSR</value>
+		</property>
+		<property name="school">
+			<value>HBTU</value>
+		</property>
+<!--	//Setter injection with value as a attribute example	-->
+		<property name="fatherName" value="BP Singh"/>
+	</bean>
+<!--	using p schema-->
+	<bean class="com.spring1.student" name="student2" p:stId="222" p:stName="akshay" p:address="mzn" p:school="KPMG" p:fatherName="Ashok" />
+	</beans>
+	
+	
