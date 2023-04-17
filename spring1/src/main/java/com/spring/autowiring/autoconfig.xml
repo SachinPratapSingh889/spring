@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+<!--	Setter injection-->
+
+    <context:annotation-config />
+	<bean class="com.spring.autowiring.Address" name="address1">
+		<property name="h_no">
+			<value>204</value>
+		</property>
+		<property name="city">
+			<value>BSR</value>   
+		</property>
+		<property name="state">
+			<value>UP</value>
+		</property>
+	</bean>
+	
+	
+<!--	<bean class="com.spring.autowiring.AutowireWays" name="autowireExample" autowire="byName">-->
+<!--   In byName autowire will work only if name of bean and name of object is same -->
+
+<!--	<bean class="com.spring.autowiring.AutowireWays" name="autowireExample" autowire="byType">-->
+<!--  In byType autowire finds the class not the name of bean and name of referenced object so it will work even if name of referenced object and name of bean is different thought-->
+<!--  In byType autowire if there are more than one beans are there of same class then it will through error because compiler will get confused	-->
+
+
+	<bean class="com.spring.autowiring.AutowireWays" name="autowireExample" />
+	<!-- third way is to annotation autowire rather than autowire as a atttribute , we can use @autowire over the referneced object / its setter method/ constuctor			-->
+</beans>
+	
+	
