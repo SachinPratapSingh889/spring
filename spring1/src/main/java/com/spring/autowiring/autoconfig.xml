@@ -21,6 +21,17 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 			<value>UP</value>
 		</property>
 	</bean>
+	<bean class="com.spring.autowiring.Address" name="address2">
+		<property name="h_no">
+			<value>205</value>
+		</property>
+		<property name="city">
+			<value>BSR5</value>   
+		</property>
+		<property name="state">
+			<value>UP5</value>
+		</property>
+	</bean>
 	
 	
 <!--	<bean class="com.spring.autowiring.AutowireWays" name="autowireExample" autowire="byName">-->
@@ -32,7 +43,10 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 
 
 	<bean class="com.spring.autowiring.AutowireWays" name="autowireExample" />
-	<!-- third way is to annotation autowire rather than autowire as a atttribute , we can use @autowire over the referneced object / its setter method/ constuctor			-->
+	<!-- third way is to annotation autowire rather than autowire as a atttribute , we can use @autowire over the referneced object / its setter method/ constuctor	
+		@qualifire is used when we are having 2 beans of same class then compiler will get confused which bean to autowire in refe object because @autowire dont do byClass not byName autowiring .
+			-->
+	
 </beans>
 	
 	

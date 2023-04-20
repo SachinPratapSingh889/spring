@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="
+http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+						">
+
+	<!--Here we are making a list with a Id , it can be used in any bean by id so we dont have to write this list again n again in all the beans , this is standalone collections i am using them in two beans without writing same list again-->
+	<util:list list-class="java.util.LinkedList" id="33">
+		<value>sachin</value>
+		<value>umang</value>
+		<value>shashank</value>
+		<value>R mittal</value>
+	</util:list>
+
+	<util:map map-class="java.util.HashMap" id="55">
+		<entry key="Java" value="2" />
+		<entry key="Java6" value="2" />
+		<entry key="Java4" value="29" />
+		<entry key="Java5" value="2" />
+
+	</util:map>
+
+	<bean class="com.spring.standaloneCollec.Collection" name="collection">
+		<property name="names" ref="33" />
+		<property name="courese" ref="55" />
+
+	</bean>
+	<bean class="com.spring.standaloneCollec.Collection" name="collection2">
+		<property name="names" ref="33" />
+		<property name="courese" ref="55" />
+
+	</bean>
+</beans>
+	
+	

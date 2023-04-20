@@ -1,9 +1,11 @@
 package com.spring.autowiring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class AutowireWays {
     @Autowired
+    @Qualifier("address2")
 	private Address address;
 
 	public AutowireWays(Address address) {
