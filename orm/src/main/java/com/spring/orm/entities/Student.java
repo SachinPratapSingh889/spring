@@ -6,17 +6,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "student details")
+@Table(name = "student_details")
 public class Student {
-	@Column(name = "Student name")
-	private String name;
+	
 	@Id
-	@Column(name = "Student roll no")
+	@Column(name = "Student_roll_no")
 	private int rollNo;
-	@Column(name = "Student city")
+	@Column(name = "Student_name")
+	private String name;
+	@Column(name = "Student_city")
 	private String city;
 
-	public Student(String name, int rollNo, String city) {
+	public Student( int rollNo,String name, String city) {
 		super();
 		this.name = name;
 		this.rollNo = rollNo;
